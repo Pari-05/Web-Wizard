@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes App</title>
+</head>
+<body>
+  <h1>Signup</h1>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="signup()">Signup</button>
+
+  <h1>Login</h1>
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginPassword" placeholder="Password">
+  <button onclick="login()">Login</button>
+
+  <h1>Create Note</h1>
+  <input type="text" id="title" placeholder="Title">
+  <textarea id="content" placeholder="Content"></textarea>
+  <button onclick="createNote()">Create Note</button>
+
+  <h1>Your Notes</h1>
+  <button onclick="getNotes()">Get Notes</button>
+  <ul id="notesList"></ul>
+
+  <script src="./app.js"></script>
+</body>
+</html>
