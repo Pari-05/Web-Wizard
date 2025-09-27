@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes - Secure Notes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <div class="container">
+        <!-- Notes Header -->
+        <div class="notes-header">
+            <div class="user-welcome">
+                <div class="user-avatar" id="userAvatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <h2 id="userName">Welcome!</h2>
+                    <p id="userEmail"></p>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <div class="glass">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search your notes by title or content...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+
+        <!-- Alert Container -->
+        <div id="alertContainer"></div>
+
+        <!-- Note Form -->
+        <div class="note-form glass-strong">
+            <h3 id="formTitle">
+                <i class="fas fa-plus-circle"></i> Create New Note
+            </h3>
+            
+            <input type="text" id="noteTitle" placeholder="Enter note title..." required>
+            <textarea id="noteContent" placeholder="Write your thoughts here..." required rows="4"></textarea>
+            
+            <button class="btn btn-success" id="saveNoteBtn">
+                <i class="fas fa-save"></i> Save Note
+            </button>
+            
+            <button class="btn btn-secondary hidden" id="cancelEditBtn" style="margin-top: 12px;">
+                <i class="fas fa-times"></i> Cancel Edit
+            </button>
+        </div>
+
+        <!-- Notes Container -->
+        <div id="notesContainer">
+            <div class="loading" id="loadingIndicator">
+                <i class="fas fa-spinner fa-spin"></i> Loading your notes
+            </div>
+        </div>
+    </div>
+
+    <script src="notes.js"></script>
+</body>
+</html>
